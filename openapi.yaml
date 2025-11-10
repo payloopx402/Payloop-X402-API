@@ -1,0 +1,91 @@
+openapi: 3.0.3
+info:
+  title: PAYLOOP x402 Payments API
+  version: "0.1.0"
+  description: HTTP 402 Payment Required flow for API monetization.
+servers:
+  - url: http://localhost:3000
+paths:
+  /payments/create:
+    post:
+      summary: Create a payment request
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                amount:
+                  type: number
+                currency:
+                  type: string
+                description:
+                  type: string
+              required:
+                - amount
+      responses:
+        "402":
+          description: Payment required response with payment details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentResponse'
+        "400":
+          description: Bad request
+  /payments/{id}:
+    get:
+      summary: Get payment status
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Payment status
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Payment'
+        "404":
+          description: Not found
+  /payments/{id}/fulfill:
+    post:
+      summary: Fulfill a payment
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Payment fulfilled
+components:
+  schemas:
+    Payment:
+      type: object
+      properties:
+        id:
+          type: string
+        amount:
+          type: number
+        currency:
+          type: string
+        description:
+          type: string
+        status:
+          type: string
+        payment_url:
+          type: string
+        created_at:
+          type: string
+    PaymentResponse:
+      type: object
+      properties:
+        message:
+          type: string
+        payment:
+          $ref: '#/components/schemas/Payment'
