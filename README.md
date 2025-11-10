@@ -27,8 +27,6 @@ npm install
 npm start
 
 
-Server runs at http://localhost:3000.
-
 📄 License
 
 Released under the MIT License.
