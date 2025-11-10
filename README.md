@@ -11,7 +11,10 @@
   <img src="https://img.shields.io/badge/status-active-success" alt="Project Status">
 </p>
 
-![Payloop Logo](https://github.com/<your-username>/payloop-x402-api/blob/main/logo.png)
+<p align="center">
+  <img src="https://github.com/payloopx402/Payloop-X402-API/blob/main/Payloop%20Logo.png" alt="PAYLOOP Logo" width="700" />
+</p>
+
 
 ---
 
