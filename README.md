@@ -11,6 +11,8 @@
   <img src="https://img.shields.io/badge/status-active-success" alt="Project Status">
 </p>
 
+![Uploading ChatGPT Image Oct 30, 2025, 02_33_25 AM.png…]()
+
 ---
 
 ## 📘 Table of Contents
