@@ -11,7 +11,7 @@
   <img src="https://img.shields.io/badge/status-active-success" alt="Project Status">
 </p>
 
-![Uploading ChatGPT Image Oct 30, 2025, 02_33_25 AM.png…]()
+![Payloop Logo](https://github.com/<your-username>/payloop-x402-api/blob/main/logo.png)
 
 ---
 
